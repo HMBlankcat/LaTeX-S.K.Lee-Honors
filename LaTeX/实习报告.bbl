@@ -1,0 +1,21 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Vaswani et~al.(2017)Vaswani, Shazeer, Parmar, Uszkoreit, Jones, Gomez,
+  Kaiser, and Polosukhin]{DBLP:conf/nips/VaswaniSPUJGKP17}
+VASWANI A, SHAZEER N, PARMAR N, et~al.
+\newblock Attention is all you need\allowbreak[C]//\allowbreak
+Advances in Neural Information Processing Systems 30.
+\newblock Long Beach: NeurIPS Foundation, 2017: 5998-6008.
+
+\end{thebibliography}
