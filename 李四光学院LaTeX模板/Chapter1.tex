@@ -1,0 +1,82 @@
+
+
+% %%------------------------document环境开始------------------------%%
+
+%%-----------------------封面--------------------%%
+\cover
+\thispagestyle{empty} % 首页不显示页码
+
+%%--------------------------目录页------------------------%%
+\newpage
+\tableofcontents
+ \thispagestyle{empty} % 目录不显示页码
+
+%%------------------------正文页从这里开始-------------------%
+\newpage
+\setcounter{page}{1} % 让页码从正文开始编号
+
+
+\iffalse
+\begin{itemize}
+    \item \texttt{main.tex} 主文件
+    \item \texttt{reference.bib} 参考文献，使用bibtex
+    \item \texttt{CUGReport.sty} 文档格式控制，包括一些基础的设置，如页眉、标题、学院、学号、姓名等
+    \item \texttt{figures} 放置图片的文件夹
+\end{itemize}
+\fi
+\section{单像空间后方交会}
+
+\subsection{实验原理与流程}
+
+\subsubsection{实验原理}
+\textbf{此为公式与图片输入方法示意：}
+
+\begin{figure}[!htbp]
+	\centering
+	\includegraphics[width=0.7\linewidth]{figures/cug.jpg}
+	\caption{单像空间后方交会原理图}
+	\label{fig:原理}
+\end{figure}
+\FloatBarrier
+
+详细流程：
+	基本关系式为共线条件方程式：
+    \begin{align*}
+        x &= -f \frac{a_1(X - X_S) + b_1(Y - Y_S) + c_1(Z - Z_S)}{a_3(X - X_S) + b_3(Y - Y_S) + c_3(Z - Z_S)} = -f \frac{\overline{X}}{Z} \\
+        y &= -f \frac{a_2(X - X_S) + b_2(Y - Y_S) + c_2(Z - Z_S)}{a_3(X - X_S) + b_3(Y - Y_S) + c_3(Z - Z_S)} = -f \frac{\overline{Y}}{Z}
+    \end{align*}
+    其中，$f$为焦距，$a_1,b_1,c_1,a_2,b_2,c_2,a_3,b_3,c_3$为外方位元素，$X_S,Y_S,Z_S$为相对于像片坐标系的相对坐标，$X,Y,Z$为地面点的地理坐标，$x,y$为像点的坐标。
+    通过以上方程，可以得到三个方程，通过解方程组，可以求解出外方位元素。
+
+    用矩阵形式表示：
+    \begin{gather*}
+        V = AX - l \\
+        V = [v_x, \quad v_y]^\text{T} \\
+        A = \begin{bmatrix}
+            a_{11} & a_{12} & a_{13} & a_{14} & a_{15} & a_{16} \\
+            a_{21} & a_{22} & a_{23} & a_{24} & a_{25} & a_{26}
+        \end{bmatrix} \\
+        X = \left[ dX_S \quad dY_S \quad dZ_S \quad d\varphi \quad d\omega \quad d\kappa \right]^T \\
+        l = \left[ l_x \quad l_y \right]^T
+    \end{gather*}
+    
+\subsection{实习数据与代码部分}
+
+\subsubsection{实习数据}    
+
+请输入文本
+
+\subsubsection{实习要求}
+XXX请输入文本
+\subsubsection{实习代码}
+详细代码请见报告末尾附录A部分的文件列表示意与附录B的代码部分，在行文中不再加以赘述。
+
+\subsection{实习结果与数据分析}
+\subsubsection{实习结果}
+XXX请输入文本
+
+
+\subsubsection{成果分析}
+XXX请输入文本
+\subsection{单次实习小结}
+XXX请输入文本

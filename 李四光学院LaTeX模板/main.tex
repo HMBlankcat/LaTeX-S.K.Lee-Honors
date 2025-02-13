@@ -1,0 +1,62 @@
+%!TeX program = xelatex
+\documentclass[12pt,hyperref,a4paper,UTF8]{ctexart}
+\usepackage{CUGReport}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage[section]{placeins}
+\setstretch{1.5} % 设置全局行距为1.5倍
+
+\usepackage{enumitem} % 载入enumitem包以便自定义列表环境
+\setlist[itemize]{itemsep=0pt, parsep=0pt} % 设置itemize环境的项目间距和段落间距
+
+\setmainfont{Times New Roman} % 英文正文为Times New Roman
+\fancyhead[C]{中国地质大学（武汉）\ \ 李四光学院 \ \ Name}
+%字号设置
+\newcommand{\xiaochuhao}{\fontsize{36pt}{\baselineskip}\selectfont}
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{18pt}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{12pt}{18pt}\selectfont}
+%\newcommand{\wuhao}{\fontsize{10.5pt}{18pt}\selectfont}
+
+
+%封面页设置
+{   
+    %标题
+    \title{ 
+        \heiti \xiaochuhao \textbf{{Course name}} \par
+        \heiti \xiaochuhao \textbf{{课程实习报告}} \par
+        %\vspace{1cm} 
+       % \heiti \Large {\underline{XXXXXX进展调研}}    
+        %\vspace{1cm}
+    }
+
+    \author{
+        \vspace{0.5cm}
+        \kaishu\Large 学生姓名\ \dlmu[9cm]{Name} \qquad \\ %姓名 
+        \vspace{0.5cm}
+        \kaishu\Large 学\hspace{2em}院\ \dlmu[9cm]{李四光学院} \qquad \\ %学院
+        \vspace{0.5cm}
+        \kaishu\Large 班\hspace{2em}级\ \dlmu[9cm]{201226} \\ %班级
+        \vspace{0.5cm}
+        \kaishu\Large 学\hspace{2em}号\ \dlmu[9cm]{2022100XXXX} \\ %学号
+        \vspace{0.5cm}
+        %\vspace{0.5cm}
+        \kaishu\Large 授课教师\ \dlmu[9cm]{Teacher Name} \qquad  \\ 
+        \vspace{1cm}
+      	%\vspace{0.25cm} 
+    }
+    \date{\today} % 默认为今天的日期，可以注释掉不显示日期
+}
+% %%------------------------document环境开始------------------------%%
+
+
+\begin{document}
+	\include{Chapter1}
+    % 采用分割的方式，每个章节一个文件，只需在文件夹下创建对应文件名的tex文件并include即可
+    \include{end}
+\end{document}
